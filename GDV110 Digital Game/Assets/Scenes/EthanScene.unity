@@ -377,12 +377,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3370113763504976171, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
         type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 3370113763504976171, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
@@ -440,31 +434,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3682392033569499912, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: m_Distance
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259917274496542010, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: m_Distance
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5412326483860882588, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: m_Parameters.alignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5412326483860882588, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 5412326483860882588, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c09771f4e5fb8f46b0002b42cbc0355, type: 3}
