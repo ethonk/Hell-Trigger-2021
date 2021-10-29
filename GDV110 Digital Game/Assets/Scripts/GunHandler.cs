@@ -12,6 +12,7 @@ public class GunHandler : MonoBehaviour
     
     public float reloadSpeed;                   // How fast does this gun reload (seconds)?
     public float bulletSpeed;                   // How fast will the bullet travel?
+    public float bulletRange;                   // How far will the bullet travel?
     public float fireDelay;                     // How often can the gun fire (seconds)?
 
     [Header("Gun Properties")]
@@ -82,7 +83,7 @@ public class GunHandler : MonoBehaviour
                 
                     case BulletType.Freeze:
                         GetComponent<AudioSource>().PlayOneShot(snd_gun_fire_timestop);      // Play fire sound.
-                        print("fire that freeze nigga");
+                        // Freeze function
                         break;
                 }
 

@@ -263,6 +263,7 @@ MonoBehaviour:
   chamberSize: 2
   reloadSpeed: 1
   bulletSpeed: 0.5
+  bulletRange: 5
   fireDelay: 1
   gunChamber: 
   snd_gun_fire: {fileID: 8300000, guid: eb9021142b49b8f439bb63fcea70cf62, type: 3}
@@ -293,7 +294,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 1591
   m_GroundCheck: {fileID: 3370113762791716674}
   m_CeilingCheck: {fileID: 3370113762920034064}
   m_CrouchDisableCollider: {fileID: 3370113763504976174}

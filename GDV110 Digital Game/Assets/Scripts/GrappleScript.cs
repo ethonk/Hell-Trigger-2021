@@ -34,15 +34,21 @@ public class GrappleScript : MonoBehaviour
 
     public bool FireGrapple()
     {   
-            if (GetComponent<Player>().isGrappling) return false;   // Unable to grapple: quit script.
-
+        if (GetComponent<Player>().isGrappling) return false;   // Unable to grapple: quit script.
+            
+        // Raycast, check if touching collidable object
+        RaycastHit2D hit = Physics2D.Raycast(m_MousePos, transform.TransformDirection(Vector2.up), GetComponent<GunHandler>().bulletRange);
+        if (hit.collider != null && hit.collider.name == "Tilemap_Bounds")
+        {
             m_DistanceJoint.enabled = true;                 // Enable distance joint.
-            print("distance joint enabled");
+            GetComponent<Rigidbody2D>().gravityScale = 0;   // Disable gravity.
             m_DistanceJoint.connectedAnchor = m_MousePos;   // Anchor player to point.
             m_LineRenderer.positionCount = 2;               // Enable line renderer
             m_TempPos = m_MousePos;                         // Pivot is equal to mouse point.
-            GetComponent<Player>().isGrappling = true;                             // Set grappling to true
+            GetComponent<Player>().isGrappling = true;      // Set grappling to true
             return true;                                    // Grapple success.
+        }
+        return false;
     }
 
     public bool StopGrapple()
@@ -51,6 +57,7 @@ public class GrappleScript : MonoBehaviour
 
         m_DistanceJoint.enabled = false;
         m_LineRenderer.positionCount = 0;
+        GetComponent<Rigidbody2D>().gravityScale = 3;       // Enable gravity.
         GetComponent<Player>().isGrappling = false;         // Set grappling to false
         return true;                                        // Grapple cancel success.
     }
