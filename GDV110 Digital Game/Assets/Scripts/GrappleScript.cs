@@ -41,7 +41,7 @@ public class GrappleScript : MonoBehaviour
         if (hit.collider != null && hit.collider.name == "Tilemap_Bounds")
         {
             m_DistanceJoint.enabled = true;                 // Enable distance joint.
-            GetComponent<Rigidbody2D>().gravityScale = 0;   // Disable gravity.
+            //GetComponent<Rigidbody2D>().gravityScale = 0;   // Disable gravity.
             m_DistanceJoint.connectedAnchor = m_MousePos;   // Anchor player to point.
             m_LineRenderer.positionCount = 2;               // Enable line renderer
             m_TempPos = m_MousePos;                         // Pivot is equal to mouse point.
@@ -57,7 +57,7 @@ public class GrappleScript : MonoBehaviour
 
         m_DistanceJoint.enabled = false;
         m_LineRenderer.positionCount = 0;
-        GetComponent<Rigidbody2D>().gravityScale = 3;       // Enable gravity.
+        //GetComponent<Rigidbody2D>().gravityScale = 3;       // Enable gravity.
         GetComponent<Player>().isGrappling = false;         // Set grappling to false
         return true;                                        // Grapple cancel success.
     }
