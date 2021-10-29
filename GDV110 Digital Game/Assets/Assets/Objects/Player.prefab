@@ -296,7 +296,7 @@ MonoBehaviour:
     m_Bits: 55
   m_GroundCheck: {fileID: 3370113762791716674}
   m_CeilingCheck: {fileID: 3370113762920034064}
-  m_CrouchDisableCollider: {fileID: 3370113763504976174}
+  m_CrouchDisableCollider: {fileID: 1304858829851037204}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -445,7 +445,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 10.866835
+  m_Distance: 7.0976944
   m_MaxDistanceOnly: 0
 --- !u!114 &5464366043585246834
 MonoBehaviour:
