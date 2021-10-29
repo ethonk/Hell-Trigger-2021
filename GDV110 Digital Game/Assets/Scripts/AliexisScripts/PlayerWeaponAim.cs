@@ -20,7 +20,7 @@ public class PlayerWeaponAim : MonoBehaviour
         //using maths to find euler angles
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aimTransform.eulerAngles = new Vector3(0, 0, angle);
-        Debug.Log(angle);
+        //Debug.Log(angle);
     }
 
     #region custom functions

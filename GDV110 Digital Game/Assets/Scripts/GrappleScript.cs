@@ -9,7 +9,6 @@ public class GrappleScript : MonoBehaviour
     private Camera m_Camera;
 
     [Header("Grapple Values")]
-    public bool IsGrappling;
     private DistanceJoint2D m_DistanceJoint;
     private LineRenderer m_LineRenderer;
 
@@ -23,33 +22,37 @@ public class GrappleScript : MonoBehaviour
 
         // Initialize Grapple Values
         m_DistanceJoint.enabled = false;
-        IsGrappling = false;
+        GetComponent<Player>().isGrappling = false;
         m_LineRenderer.positionCount = 0;
     }
-
+    
     void Update()
     {
         GetMousePos();
         DrawLine();                                         // Draw grapple line
+    }
 
-        // Get key input, check if not already grappling.
-        if (Input.GetMouseButtonDown(0) && !IsGrappling)
-        {
-            m_DistanceJoint.enabled = true;
-            m_DistanceJoint.connectedAnchor = m_MousePos;
-            m_LineRenderer.positionCount = 2;
+    public bool FireGrapple()
+    {   
+            if (GetComponent<Player>().isGrappling) return false;   // Unable to grapple: quit script.
 
-            m_TempPos = m_MousePos;
+            m_DistanceJoint.enabled = true;                 // Enable distance joint.
+            print("distance joint enabled");
+            m_DistanceJoint.connectedAnchor = m_MousePos;   // Anchor player to point.
+            m_LineRenderer.positionCount = 2;               // Enable line renderer
+            m_TempPos = m_MousePos;                         // Pivot is equal to mouse point.
+            GetComponent<Player>().isGrappling = true;                             // Set grappling to true
+            return true;                                    // Grapple success.
+    }
 
-            IsGrappling = true;                             // Set grappling to true
-        }
-        else if (Input.GetMouseButtonDown(0))
-        {
-            m_DistanceJoint.enabled = false;
-            m_LineRenderer.positionCount = 0;
+    public bool StopGrapple()
+    {
+        if (!GetComponent<Player>().isGrappling) return false;  // Unable to cancel grapple: quit script.        
 
-            IsGrappling = false;                            // Set grappling to false
-        }
+        m_DistanceJoint.enabled = false;
+        m_LineRenderer.positionCount = 0;
+        GetComponent<Player>().isGrappling = false;         // Set grappling to false
+        return true;                                        // Grapple cancel success.
     }
 
     private void DrawLine()

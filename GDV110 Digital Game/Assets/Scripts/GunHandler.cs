@@ -18,7 +18,10 @@ public class GunHandler : MonoBehaviour
     public List<BulletType> gunChamber;
 
     [Header("Audio")]
-    public AudioClip snd_gun_fire;              // Sound played on fire.
+    public AudioClip snd_gun_fire;              // Sound played on generic fire.
+    public AudioClip snd_gun_fire_grapple;      // Sound played on grapple fire.
+    public AudioClip snd_gun_fire_endgrapple;   // Sound played on grapple end fire.
+    public AudioClip snd_gun_fire_timestop;     // Sound played on time stop fire.
     public AudioClip snd_gun_reload;            // Sound played on reload.
     public AudioClip snd_gun_reload_complete;   // Sound played upon completed reload.
 
@@ -51,8 +54,9 @@ public class GunHandler : MonoBehaviour
         GetComponent<AudioSource>().PlayOneShot(snd_gun_reload);            // Play reload sound.
         gunChamber.Clear();                                                 // Clear all bullets from the gun.
         yield return new WaitForSeconds(reloadSpeed);                       // Wait reload speed.
-        LoadGun();                                                          // Load the gun.
         GetComponent<AudioSource>().PlayOneShot(snd_gun_reload_complete);   // Play reload sound.
+        yield return new WaitForSeconds(0.5f);                              // Small reload completion delay.
+        LoadGun();                                                          // Load the gun.
     }
     
     public IEnumerator FireDelay()
@@ -64,18 +68,39 @@ public class GunHandler : MonoBehaviour
 
     public IEnumerator FireGun()
     {
-        if (canFire && gunChamber.Count > 0)                            // Check if we can fire and the chamber has at least 1 bullet.
+        if (!GetComponent<Player>().isGrappling)                            // Only commit to firing if the player isn't currently grappling.
         {
-            GetComponent<AudioSource>().PlayOneShot(snd_gun_fire);      // Play fire sound.
-            gunChamber.Remove(gunChamber[0]);                           // Delete the top bullet
-            StartCoroutine(FireDelay());                                // Account for fire delay.
-
-            // Check if chamber is empty, if so reload the gun.
-            if (gunChamber.Count == 0) 
+            if (canFire && gunChamber.Count > 0)                            // Check if we can fire and the chamber has at least 1 bullet.
             {
-                yield return new WaitForSeconds(fireDelay);
-                StartCoroutine(Reload());
+                // Do gun functionality
+                switch(gunChamber[0])
+                {
+                    case BulletType.Grapple:                                // On grapple bullet fire, start functionality.
+                        GetComponent<AudioSource>().PlayOneShot(snd_gun_fire_grapple);      // Play fire sound.
+                        GetComponent<GrappleScript>().FireGrapple();
+                        break;
+                
+                    case BulletType.Freeze:
+                        GetComponent<AudioSource>().PlayOneShot(snd_gun_fire_timestop);      // Play fire sound.
+                        print("fire that freeze nigga");
+                        break;
+                }
+
+                gunChamber.Remove(gunChamber[0]);                           // Delete the top bullet
+                StartCoroutine(FireDelay());                                // Account for fire delay.
+
+                // Check if chamber is empty, if so reload the gun.
+                if (gunChamber.Count == 0) 
+                {
+                    yield return new WaitForSeconds(fireDelay);
+                    StartCoroutine(Reload());
+                }
             }
+        }
+        else
+        {
+            GetComponent<AudioSource>().PlayOneShot(snd_gun_fire_endgrapple);      // Play fire sound.
+            GetComponent<GrappleScript>().StopGrapple();
         }
     }
 
