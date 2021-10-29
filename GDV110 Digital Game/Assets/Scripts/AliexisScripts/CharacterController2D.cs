@@ -15,6 +15,7 @@ namespace CharacterController
         [SerializeField] private Transform m_GroundCheck;                                   // position marking where to check if player is grounded
         [SerializeField] private Transform m_CeilingCheck;                                  // posiiton marking for where to check for ceiling
         [SerializeField] private Collider2D m_CrouchDisableCollider;                        // collider that is disabled when crouching
+        private GameObject gun  = GameObject.Find("Aim");
 
         const float k_GroundedRadius = .2f;                                                 // Radius of overlap circle to determine if grounded
         private bool m_Grounded;                                                            // is player grounded?
@@ -160,6 +161,7 @@ namespace CharacterController
             Vector3 theScale = transform.localScale;
             theScale.x *= -1;
             transform.localScale = theScale;
+            gun.transform.localScale.x = theScale;
         }
 
         #endregion
