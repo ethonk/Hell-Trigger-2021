@@ -18,6 +18,10 @@ public class GunHandler : MonoBehaviour
     [Header("Gun Properties")]
     public List<BulletType> gunChamber;
 
+    [Header("Gun Shooting Properties")]
+    public Transform firePoint;
+    public GameObject bulletPrefab;
+
     [Header("Audio")]
     public AudioClip snd_gun_fire;              // Sound played on generic fire.
     public AudioClip snd_gun_fire_grapple;      // Sound played on grapple fire.
@@ -27,7 +31,7 @@ public class GunHandler : MonoBehaviour
     public AudioClip snd_gun_reload_complete;   // Sound played upon completed reload.
 
     [Header("States")]
-    bool canFire = true;
+    public bool canFire = true;
     
     // == FUNCTIONS ==
     public void LoadGun()   // Load the gun with bullets equivalent to chamber size and available bullet types.
@@ -73,20 +77,24 @@ public class GunHandler : MonoBehaviour
         {
             if (canFire && gunChamber.Count > 0)                            // Check if we can fire and the chamber has at least 1 bullet.
             {
-                // Do gun functionality
+                #region Physical bullet firing
+                    GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                    newBullet.GetComponent<Bullet>().bulletType = gunChamber[0];
+                #endregion
+
+                // Play corresponding firing sounds
                 switch(gunChamber[0])
                 {
-                    case BulletType.Grapple:                                // On grapple bullet fire, start functionality.
+                    case BulletType.Grapple:
                         GetComponent<AudioSource>().PlayOneShot(snd_gun_fire_grapple);      // Play fire sound.
-                        GetComponent<GrappleScript>().FireGrapple();
                         break;
                 
                     case BulletType.Freeze:
                         GetComponent<AudioSource>().PlayOneShot(snd_gun_fire_timestop);      // Play fire sound.
-                        // Freeze function
                         break;
                 }
 
+                // Bullet management
                 gunChamber.Remove(gunChamber[0]);                           // Delete the top bullet
                 StartCoroutine(FireDelay());                                // Account for fire delay.
 
@@ -105,6 +113,22 @@ public class GunHandler : MonoBehaviour
         }
     }
 
+    public void OnBulletHit(BulletType _bulletType, Vector3 _bulletPos)
+    {
+        print("do gun function");
+
+        // Do gun functionality
+        switch(_bulletType)
+        {
+            case BulletType.Grapple:                                // On grapple bullet fire, start functionality.
+                GetComponent<GrappleScript>().FireGrapple(_bulletPos);
+                break;
+                
+            case BulletType.Freeze:
+                // Freeze function
+                break;
+        }
+    }
 
     // == CORE START AND UPDATE ==
     void Start()
