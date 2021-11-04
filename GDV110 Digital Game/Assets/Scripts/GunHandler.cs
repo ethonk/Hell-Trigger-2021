@@ -115,12 +115,10 @@ public class GunHandler : MonoBehaviour
 
     public void OnBulletHit(BulletType _bulletType, Vector3 _bulletPos)
     {
-        print("do gun function");
-
         // Do gun functionality
         switch(_bulletType)
         {
-            case BulletType.Grapple:                                // On grapple bullet fire, start functionality.
+            case BulletType.Grapple:
                 GetComponent<GrappleScript>().FireGrapple(_bulletPos);
                 break;
                 

@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
         // If it hits a solid object, start the gun function.
         if (col.gameObject.layer == 10)
         {
-            print("hit a block at: " + transform.position);
+            //print("hit a block at: " + transform.position);
             gun.OnBulletHit(bulletType, transform.position);
         }
         // Destroy if it hits anything else.
@@ -32,7 +32,6 @@ public class Bullet : MonoBehaviour
     IEnumerator KillBullet()    // Travel until travel time is reached
     {
         yield return new WaitForSeconds(gun.bulletLife);
-        print("kill bullet");
         Destroy(gameObject);
     }
 }
