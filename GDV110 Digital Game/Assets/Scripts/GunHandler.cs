@@ -12,7 +12,7 @@ public class GunHandler : MonoBehaviour
     
     public float reloadSpeed;                   // How fast does this gun reload (seconds)?
     public float bulletSpeed;                   // How fast will the bullet travel?
-    public float bulletRange;                   // How far will the bullet travel?
+    public float bulletLife;                    // How far long the bullet travel?
     public float fireDelay;                     // How often can the gun fire (seconds)?
 
     [Header("Gun Properties")]
