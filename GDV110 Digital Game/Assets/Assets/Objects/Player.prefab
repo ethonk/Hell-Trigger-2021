@@ -264,7 +264,7 @@ MonoBehaviour:
   chamberSize: 2
   reloadSpeed: 1
   bulletSpeed: 20
-  bulletRange: 5
+  bulletLife: 0.5
   fireDelay: 1
   gunChamber: 
   firePoint: {fileID: 7874972878829344365}
@@ -280,6 +280,7 @@ MonoBehaviour:
   snd_gun_reload: {fileID: 8300000, guid: 6c23e6cff55ce4d45924f899891a1b22, type: 3}
   snd_gun_reload_complete: {fileID: 8300000, guid: 97489bb43a5fd5d4989e576b0d2af715,
     type: 3}
+  canFire: 1
 --- !u!114 &3370113763504976169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2381cd3c27f86f42bb5966e3e93f281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_DistanceJoint: {fileID: 4259917274496542010}
+  m_LineRenderer: {fileID: 5412326483860882588}
 --- !u!212 &3370113763504976168
 SpriteRenderer:
   m_ObjectHideFlags: 0
