@@ -15,7 +15,7 @@ namespace CharacterController
         [SerializeField] private Transform m_GroundCheck;                                   // position marking where to check if player is grounded
         [SerializeField] private Transform m_CeilingCheck;                                  // posiiton marking for where to check for ceiling
         [SerializeField] private Collider2D m_CrouchDisableCollider;                        // collider that is disabled when crouching
-        [SerializeField] private GameObject Sprite;                                         // references the sprite
+        [SerializeField] private GameObject PlayerSprite;                                   // references the sprite
         private GameObject gun;                                                             // reference to the gun
 
         const float k_GroundedRadius = .2f;                                                 // Radius of overlap circle to determine if grounded
@@ -139,13 +139,13 @@ namespace CharacterController
                 if (move > 0 && !m_FacingRight)
                 {
                     // ...flip character
-                    Flip(Sprite);
+                    Flip(PlayerSprite);
                 }
                 //otherwisze if the input is moving the player left and the player is facing right...
                 else if (move < 0 && m_FacingRight)
                 {
                     // ...flip character
-                    Flip(Sprite);
+                    Flip(PlayerSprite);
                 }
             }
 
@@ -158,15 +158,15 @@ namespace CharacterController
             }
         }
 
-        private void Flip(GameObject Obj)
+        private void Flip(GameObject obj)
         {
             //switch the way the player is labelled as facing
             m_FacingRight = !m_FacingRight;
 
             // Multiply the player's local scale by -1.
-            Vector3 theScale = transform.localScale;
+            Vector3 theScale = obj.transform.localScale;
             theScale.x *= -1;
-            Obj.transform.localScale = theScale;
+            obj.transform.localScale = theScale;
         }
 
         #endregion
