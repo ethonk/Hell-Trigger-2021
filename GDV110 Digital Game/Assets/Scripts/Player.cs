@@ -10,4 +10,9 @@ public class Player : MonoBehaviour
 
     [Header("States")]
     public bool isGrappling;
+
+    public void Start()
+    {
+        
+    }
 }
