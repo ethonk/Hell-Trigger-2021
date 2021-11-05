@@ -32,7 +32,7 @@ public class GunHandler : MonoBehaviour
 
     [Header("States")]
     public bool canFire = true;
-    
+
     // == FUNCTIONS ==
     public void LoadGun()   // Load the gun with bullets equivalent to chamber size and available bullet types.
     {
@@ -115,9 +115,6 @@ public class GunHandler : MonoBehaviour
 
     public void OnBulletHit(BulletType _bulletType, Vector3 _bulletPos, GameObject _collideObj)
     {
-        // Do gun functionality
-        GetComponent<GrappleScript>().FireGrapple(_bulletPos);
-
         switch(_bulletType)
         {
             case BulletType.Grapple:
@@ -125,7 +122,7 @@ public class GunHandler : MonoBehaviour
                 break;
                 
             case BulletType.Freeze:
-                GetComponent<Timestop>().ApplyTimestop(_collideObj);
+                _collideObj.GetComponent<Object>().ApplyTimestop();
                 break;
         }
     }

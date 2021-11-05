@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = transform.right * gun.bulletSpeed;
 
         // Run KillBullet to ensure it dies in x amount of time
-        StartCoroutine(KillBullet());
+        //StartCoroutine(KillBullet());
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -24,6 +24,8 @@ public class Bullet : MonoBehaviour
         {
             //print("hit a block at: " + transform.position);
             gun.OnBulletHit(bulletType, transform.position, col.gameObject);
+            // Destroy
+            Destroy(gameObject);
         }
         // Destroy if it hits anything else.
         Destroy(gameObject);
