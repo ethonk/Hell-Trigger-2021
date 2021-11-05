@@ -384,7 +384,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 3370113762791716674}
   m_CeilingCheck: {fileID: 3370113762920034064}
   m_CrouchDisableCollider: {fileID: 1304858829851037204}
-  Sprite: {fileID: 1918331852655467216}
+  PlayerSprite: {fileID: 1918331852655467216}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -420,7 +420,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -6.6802974, y: 1.9895018}
   m_AutoConfigureDistance: 1
-  m_Distance: 4.3603888
+  m_Distance: 0.005
   m_MaxDistanceOnly: 0
 --- !u!114 &5464366043585246834
 MonoBehaviour:
