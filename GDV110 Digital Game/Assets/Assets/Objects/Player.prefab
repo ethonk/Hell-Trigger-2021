@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed_current: 0
   moveSpeed_default: 0
-  isGrappling: 0
+  isGrappling: 1
 --- !u!114 &3370113763504976172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,8 +403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2381cd3c27f86f42bb5966e3e93f281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DistanceJoint: {fileID: 0}
-  m_LineRenderer: {fileID: 0}
 --- !u!232 &4259917274496542010
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -420,9 +418,9 @@ DistanceJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -6.6802974, y: 1.9895018}
   m_AutoConfigureDistance: 1
-  m_Distance: 10.866835
+  m_Distance: 4.3603888
   m_MaxDistanceOnly: 0
 --- !u!114 &5464366043585246834
 MonoBehaviour:
