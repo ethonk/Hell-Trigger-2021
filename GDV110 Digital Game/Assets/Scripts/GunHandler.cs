@@ -113,7 +113,7 @@ public class GunHandler : MonoBehaviour
         }
     }
 
-    public void OnBulletHit(BulletType _bulletType, Vector3 _bulletPos)
+    public void OnBulletHit(BulletType _bulletType, Vector3 _bulletPos, GameObject _collideObj)
     {
         // Do gun functionality
         GetComponent<GrappleScript>().FireGrapple(_bulletPos);
@@ -125,7 +125,7 @@ public class GunHandler : MonoBehaviour
                 break;
                 
             case BulletType.Freeze:
-                // Freeze function
+                GetComponent<Timestop>().ApplyTimestop(_collideObj);
                 break;
         }
     }

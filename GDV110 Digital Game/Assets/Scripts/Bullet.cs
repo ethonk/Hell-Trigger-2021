@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         if (col.gameObject.layer == 10)
         {
             //print("hit a block at: " + transform.position);
-            gun.OnBulletHit(bulletType, transform.position);
+            gun.OnBulletHit(bulletType, transform.position, col.gameObject);
         }
         // Destroy if it hits anything else.
         Destroy(gameObject);

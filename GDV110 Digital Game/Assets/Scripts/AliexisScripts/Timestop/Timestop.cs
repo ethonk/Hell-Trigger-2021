@@ -16,8 +16,8 @@ public class Timestop : MonoBehaviour
 
     }
     
-    private void applyTimestop()
+    public void ApplyTimestop(GameObject _collideObj)
     {
-
+        print ("freeze nigga, the niggas name is: " + _collideObj.name);
     }
 }

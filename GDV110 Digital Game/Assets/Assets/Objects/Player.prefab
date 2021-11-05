@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 1083544996}
   - component: {fileID: 3370113763504976169}
   - component: {fileID: 3358091168045843516}
+  - component: {fileID: 2552048570759243095}
   - component: {fileID: 4259917274496542010}
   - component: {fileID: 5464366043585246834}
   - component: {fileID: 5412326483860882588}
@@ -403,6 +404,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2381cd3c27f86f42bb5966e3e93f281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2552048570759243095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3370113763504976171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a66eedea84fcc49b26b657705e9040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!232 &4259917274496542010
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -420,7 +433,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -6.6802974, y: 1.9895018}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.005
+  m_Distance: 4.360412
   m_MaxDistanceOnly: 0
 --- !u!114 &5464366043585246834
 MonoBehaviour:

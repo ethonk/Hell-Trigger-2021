@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/AliexisSceneDADWDWADWADWAEEQWE.unity
+- path: Assets/Scenes/EthanScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
