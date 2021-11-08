@@ -22,8 +22,10 @@ public class GrappleScript : MonoBehaviour
 
     public bool FireGrapple(Vector3 _bulletPos)
     {   
+        print("firing grapple... the player grappling? " + GetComponent<Player>().isGrappling);
         if (!GetComponent<Player>().isGrappling)             // Unable to grapple: quit script. NOTE: THIS DOESNT WORK
         {
+            print("lets get moving then");
             GetComponent<DistanceJoint2D>().enabled = true;                 // Enable distance joint.
             GetComponent<DistanceJoint2D>().connectedAnchor = new Vector2(_bulletPos.x, _bulletPos.y);   // Anchor player to point.
             GetComponent<LineRenderer>().positionCount = 2;               // Enable line renderer
