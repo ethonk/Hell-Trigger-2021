@@ -418,7 +418,7 @@ DistanceJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -2.4109623, y: -6.9776454}
+  m_ConnectedAnchor: {x: -3.0425546, y: 0.9096898}
   m_AutoConfigureDistance: 1
   m_Distance: 4.3609033
   m_MaxDistanceOnly: 0
