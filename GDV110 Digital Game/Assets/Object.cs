@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Object : MonoBehaviour
 {
+    public enum ObjectWeight {Light, Heavy};
+
+    [Header("Object Settings")] 
+    public ObjectWeight objectWeight;
+
     [Header("Timestop Related")]
     public float timestop_duration = 3.0f;
 
