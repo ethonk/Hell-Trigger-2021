@@ -315,7 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed_current: 0
   moveSpeed_default: 0
-  isGrappling: 1
+  isGrappling: 0
 --- !u!114 &3370113763504976172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,9 +419,9 @@ DistanceJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -8.465021, y: -2.0367627}
+  m_ConnectedAnchor: {x: -4.5225334, y: -6.3786554}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.7998646
+  m_Distance: 2.881167
   m_MaxDistanceOnly: 0
 --- !u!114 &5464366043585246834
 MonoBehaviour:

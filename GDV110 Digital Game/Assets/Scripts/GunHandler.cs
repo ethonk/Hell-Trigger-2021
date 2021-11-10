@@ -118,7 +118,7 @@ public class GunHandler : MonoBehaviour
         switch(_bulletType)
         {
             case BulletType.Grapple:
-                GetComponent<GrappleScript>().FireGrapple(_bulletPos);
+                GetComponent<GrappleScript>().FireGrapple(_bulletPos, _collideObj);
                 break;
                 
             case BulletType.Freeze:
