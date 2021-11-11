@@ -1755,7 +1755,7 @@ MonoBehaviour:
   chamber2: {fileID: 1759943699}
   img_grapple: {fileID: 21300000, guid: 529fbe799d5f0504e85611ffb22e8c6e, type: 3}
   img_timestop: {fileID: 21300000, guid: d244f134921a5d9418ea32d9ec5ee0ff, type: 3}
-  img_none: {fileID: 21300000, guid: fb156de36097d2c4098c2853803dafd5, type: 3}
+  img_none: {fileID: 21300000, guid: 92ceba147241f2b4db60c9a54cfca37f, type: 3}
 --- !u!1 &1638224629
 GameObject:
   m_ObjectHideFlags: 0
