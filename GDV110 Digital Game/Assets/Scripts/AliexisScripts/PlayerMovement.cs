@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,16 +6,35 @@ namespace CharacterController
 {
     public class PlayerMovement : MonoBehaviour
     {
+        // Animation handler
+        public Animator playerAnimator;
+
+        // plr related
+        public BoxCollider2D groundCollider;
+        public LayerMask groundLayer;
+
         public CharacterController2D controller2D;
         public float runSpeed = 40f;
-        float horizontalMove = 0f;
-        bool jump = false;
-        bool crouch = false;
+        public float horizontalMove = 0f;
+
+        [Header("Movement States")]
+        public bool jump = false;
+        public bool isGrounded = false;
+        public bool crouch = false;
+
+        void GroundCheck()
+        {
+            RaycastHit2D hit = Physics2D.BoxCast(groundCollider.bounds.center, groundCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+            
+            if (hit.collider == null) isGrounded = false;
+            else isGrounded = true;
+        }
 
         #region Unity Methods
         void Update()
         {
-            
+            GroundCheck();
+
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
             if (Input.GetButtonDown("Jump"))
@@ -31,6 +50,16 @@ namespace CharacterController
             {
                 crouch = false;
             }
+
+            // Set animator stuff
+            if (!isGrounded) playerAnimator.SetBool("Jumping", true);
+            else playerAnimator.SetBool("Jumping", false);
+
+            if (horizontalMove != 0f && !jump) playerAnimator.SetBool("Moving", true);
+            else playerAnimator.SetBool("Moving", false);
+
+            if (crouch == true) playerAnimator.SetBool("Crouching", true);
+            else playerAnimator.SetBool("Crouching", false);
             
         }
 
