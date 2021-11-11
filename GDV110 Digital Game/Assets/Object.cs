@@ -22,6 +22,7 @@ public class Object : MonoBehaviour
         IEnumerator TimeStopCoroutine()
         {   
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
             yield return new WaitForSeconds(timestop_duration);
             

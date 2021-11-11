@@ -9,10 +9,5 @@ public class Player : MonoBehaviour
     public float moveSpeed_default;
 
     [Header("States")]
-    public bool isGrappling;
-
-    public void Start()
-    {
-        
-    }
+    public bool isGrappling = false;
 }
