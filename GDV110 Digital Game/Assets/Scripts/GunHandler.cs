@@ -73,7 +73,7 @@ public class GunHandler : MonoBehaviour
 
     public IEnumerator FireGun()
     {
-        if (!GetComponent<Player>().isGrappling)                            // Only commit to firing if the player isn't currently grappling.
+        if (!GetComponent<Player>().isGrappling)                     // Only commit to firing if the player isn't currently grappling.
         {
             if (canFire && gunChamber.Count > 0)                            // Check if we can fire and the chamber has at least 1 bullet.
             {
@@ -108,7 +108,6 @@ public class GunHandler : MonoBehaviour
         }
         else
         {
-            GetComponent<AudioSource>().PlayOneShot(snd_gun_fire_endgrapple);      // Play fire sound.
             GetComponent<GrappleScript>().StopGrapple();
         }
     }
@@ -122,7 +121,10 @@ public class GunHandler : MonoBehaviour
                 break;
                 
             case BulletType.Freeze:
-                _collideObj.GetComponent<Object>().ApplyTimestop();
+                if (_collideObj.tag == "Loose Object")
+                {
+                    _collideObj.GetComponent<Object>().ApplyTimestop();
+                }
                 break;
         }
     }

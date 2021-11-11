@@ -10,7 +10,10 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Define RigidBody
+        // Define gun
+        gun = GameObject.Find("Player").GetComponent<GunHandler>(); 
+
+        // Bullet speed
         GetComponent<Rigidbody2D>().velocity = transform.right * gun.bulletSpeed;
 
         // Run KillBullet to ensure it dies in x amount of time
@@ -22,12 +25,9 @@ public class Bullet : MonoBehaviour
         // If it hits a solid object, start the gun function.
         if (col.gameObject.layer == 10)
         {
-            //print("hit a block at: " + transform.position);
             gun.OnBulletHit(bulletType, transform.position, col.gameObject);
-            // Destroy
             Destroy(gameObject);
         }
-        // Destroy if it hits anything else.
         Destroy(gameObject);
     }
 
