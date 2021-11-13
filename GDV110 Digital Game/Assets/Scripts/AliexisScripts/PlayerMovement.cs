@@ -55,7 +55,7 @@ namespace CharacterController
             if (!isGrounded) playerAnimator.SetBool("Jumping", true);
             else playerAnimator.SetBool("Jumping", false);
 
-            if (horizontalMove != 0f && !jump) playerAnimator.SetBool("Moving", true);
+            if (horizontalMove != 0f && isGrounded) playerAnimator.SetBool("Moving", true);
             else playerAnimator.SetBool("Moving", false);
 
             if (crouch == true) playerAnimator.SetBool("Crouching", true);

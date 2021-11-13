@@ -2736,6 +2736,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 525183391, guid: 2c09771f4e5fb8f46b0002b42cbc0355, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1dff1cdf8794a7845bbc2e9a8baeb6d0, type: 2}
+    - target: {fileID: 220782500684555999, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 220782500684555999, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 220782500684555999, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5546671543968653177, guid: 462091a1aab33e44c94adf4c30c03a5e,
+        type: 3}
+    - target: {fileID: 220782500684555999, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1460396734681876749, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
         type: 3}
       propertyPath: m_Size.y
