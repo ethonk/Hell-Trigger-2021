@@ -193,7 +193,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &525183391
@@ -354,12 +354,13 @@ MonoBehaviour:
   groundCollider: {fileID: 5286468186014962584}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1536
   controller2D: {fileID: 2925819933093361200}
   runSpeed: 40
   horizontalMove: 0
   jump: 0
   isGrounded: 0
+  crouch: 0
 --- !u!114 &459249680711324349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,7 +698,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.4470327}
+  m_Offset: {x: 0, y: 0.3416199}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -708,7 +709,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.841014, y: 1.1556611}
+  m_Size: {x: 0.841014, y: 1.3664867}
   m_EdgeRadius: 0
 --- !u!58 &2925819933093361207
 CircleCollider2D:
@@ -723,9 +724,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.58050704}
+  m_Offset: {x: 0, y: -0.55460787}
   serializedVersion: 2
-  m_Radius: 0.42050695
+  m_Radius: 0.45265996
 --- !u!1 &6186161193543228231
 GameObject:
   m_ObjectHideFlags: 0
