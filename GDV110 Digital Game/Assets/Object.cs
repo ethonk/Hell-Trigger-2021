@@ -10,6 +10,7 @@ public class Object : MonoBehaviour
     public ObjectWeight objectWeight;
 
     [Header("Timestop Related")]
+    public bool timestopped;
     public float timestop_duration = 3.0f;
 
     [Header("Sound")]
@@ -20,7 +21,8 @@ public class Object : MonoBehaviour
         StartCoroutine(TimeStopCoroutine());
 
         IEnumerator TimeStopCoroutine()
-        {   
+        {  
+            timestopped = true;
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
             //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
@@ -29,6 +31,7 @@ public class Object : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(snd_timestop_resume);
             GetComponent<Rigidbody2D>().AddForce(-transform.up);
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            timestopped = false;
         }
     } 
 }
