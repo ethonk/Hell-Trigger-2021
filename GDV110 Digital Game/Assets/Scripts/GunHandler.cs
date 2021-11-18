@@ -22,6 +22,9 @@ public class GunHandler : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
+    [Header("References")]
+    public GameObject UI;
+
     [Header("Audio")]
     public AudioClip snd_gun_fire;              // Sound played on generic fire.
     public AudioClip snd_gun_fire_grapple;      // Sound played on grapple fire.
@@ -140,13 +143,19 @@ public class GunHandler : MonoBehaviour
 
         // Load the gun on game start.
         LoadGun();
+
+        // Define UI
+        UI = GameObject.Find("UI");
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (UI.GetComponent<UIHandler>().isPaused == false)
         {
-            StartCoroutine(FireGun());
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartCoroutine(FireGun());
+            }
         }
     }
 }
