@@ -63,6 +63,11 @@ namespace CharacterController
             
         }
 
+        public void OnCrouching (bool isCrouching)
+        {
+            playerAnimator.SetBool("IsCrouching", isCrouching);
+        }
+
         void FixedUpdate()  // called a fixed amount of times per update 
         {
             controller2D.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
