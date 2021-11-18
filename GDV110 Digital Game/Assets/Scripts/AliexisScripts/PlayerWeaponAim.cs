@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerWeaponAim : MonoBehaviour
 {
+    public GameObject UI;
+
     private Transform aimTransform;
 
     private void Awake()
@@ -13,14 +15,17 @@ public class PlayerWeaponAim : MonoBehaviour
 
     private void Update()
     {
-        Vector3 mousePos = GetMouseWorldPos();
-        //only want the Z angle to be modified so looking into euler angles
+        if (UI.GetComponent<UIHandler>().isPaused == false)
+        {
+            Vector3 mousePos = GetMouseWorldPos();
+            //only want the Z angle to be modified so looking into euler angles
 
-        Vector3 aimDirection = (mousePos - transform.position).normalized;
-        //using maths to find euler angles
-        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        aimTransform.eulerAngles = new Vector3(0, 0, angle);
-        //Debug.Log(angle);
+            Vector3 aimDirection = (mousePos - transform.position).normalized;
+            //using maths to find euler angles
+            float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+            aimTransform.eulerAngles = new Vector3(0, 0, angle);
+            //Debug.Log(angle);
+        }
     }
 
     #region custom functions
@@ -52,5 +57,8 @@ public class PlayerWeaponAim : MonoBehaviour
 
     #endregion
 
-
+    void Start()
+    {
+        UI = GameObject.Find("UI");
+    }
 }

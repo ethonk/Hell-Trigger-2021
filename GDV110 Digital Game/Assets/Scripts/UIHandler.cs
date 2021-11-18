@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIHandler : MonoBehaviour
 {
@@ -11,18 +12,22 @@ public class UIHandler : MonoBehaviour
     [Header("UI Objects")]
     public Image chamber1; // FRONT slot
     public Image chamber2; // SECONDARY slot
+    public GameObject pauseUI;
 
     [Header("Ability Icons")]
     public Sprite img_grapple;
     public Sprite img_timestop;
     public Sprite img_none;
 
+    [Header("States")]
+    public bool isPaused = false;
+
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<GunHandler>();
     }
 
-    void Update()
+    void ManageChamber()
     {
         // chamber 1
         if (player.gunChamber.Count == 0)
@@ -64,6 +69,43 @@ public class UIHandler : MonoBehaviour
                     chamber2.sprite = img_none;
                     break;
             }
+        }
+    }
+
+    void PauseUI()
+    {
+        switch (isPaused)
+        {
+            case true:
+                pauseUI.SetActive(true);
+                Time.timeScale = 0;
+                break;
+            case false:
+                pauseUI.SetActive(false);
+                Time.timeScale = 1;
+                break;
+        }
+    }
+    
+    public void SetPaused()
+    {
+        isPaused = !isPaused;
+    }
+
+    public void OpenMenu()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
+
+    void Update()
+    {
+        ManageChamber();
+        PauseUI();
+
+        // Key Inputs
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isPaused = !isPaused;
         }
     }
 }
