@@ -50,7 +50,18 @@ public class GrappleScript : MonoBehaviour
                     StopGrapple();
                 }
             }
+
+            // If holding right click, reduce grapple?
+            if (Input.GetMouseButton(1))
+            {
+                _distanceJoint.distance -= 0.05f;
+                if (_distanceJoint.distance < 2.0f)
+                {
+                    StopGrapple();  // Stop grappling if distance is too small.
+                }
+            }
         }
+
     }
 
     public bool FireGrapple(Vector3 _bulletPos, GameObject _collideobj)

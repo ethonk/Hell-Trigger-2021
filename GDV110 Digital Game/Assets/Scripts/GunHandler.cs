@@ -32,6 +32,7 @@ public class GunHandler : MonoBehaviour
     public AudioClip snd_gun_fire_timestop;     // Sound played on time stop fire.
     public AudioClip snd_gun_reload;            // Sound played on reload.
     public AudioClip snd_gun_reload_complete;   // Sound played upon completed reload.
+    public AudioClip snd_gun_cycle;             // Sound played when bullets are cycled.
 
     [Header("States")]
     public bool canFire = true;
@@ -132,6 +133,20 @@ public class GunHandler : MonoBehaviour
         }
     }
 
+    void CycleBullet()
+    {
+        if (gunChamber.Count > 1)
+        {
+            // Play a sound
+            GetComponent<AudioSource>().PlayOneShot(snd_gun_cycle);
+
+            // Swap
+            var temp = gunChamber[0];
+            gunChamber[0] = gunChamber[1];
+            gunChamber[1] = temp;
+        }
+    }
+
     // == CORE START AND UPDATE ==
     void Start()
     {
@@ -155,6 +170,11 @@ public class GunHandler : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 StartCoroutine(FireGun());
+            }
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                CycleBullet();
             }
         }
     }
