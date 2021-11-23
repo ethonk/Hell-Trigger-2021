@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = transform.right * gun.bulletSpeed;
 
         // Run KillBullet to ensure it dies in x amount of time
-        //StartCoroutine(KillBullet());
+        StartCoroutine(KillBullet());
     }
 
     void OnTriggerEnter2D(Collider2D col)

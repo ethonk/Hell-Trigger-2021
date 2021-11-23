@@ -379,6 +379,7 @@ MonoBehaviour:
   bulletSpeed: 20
   bulletLife: 0.8
   fireDelay: 1
+  timestop_duration: 3
   gunChamber: 
   firePoint: {fileID: 7716376154074141044}
   bulletPrefab: {fileID: 9086730013738621469, guid: 097cd20213a264644ac090f8601f7d7a,
