@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 5929468422818811133}
   m_Layer: 10
   m_Name: CrushingBlock
-  m_TagString: Untagged
+  m_TagString: CrushingBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

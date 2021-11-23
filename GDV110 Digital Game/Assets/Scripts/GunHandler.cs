@@ -132,7 +132,7 @@ public class GunHandler : MonoBehaviour
                     _collideObj.GetComponent<Object>().ApplyTimestop();
                 }
                 // If a crushing block is hit.
-                if (_collideObj.transform.root.name == "CrushingBlock" && !_collideObj.transform.root.GetComponent<CrushingBlock>().frozen)
+                if (_collideObj.transform.root.tag == "CrushingBlock" && !_collideObj.transform.root.GetComponent<CrushingBlock>().frozen)
                 {
                     StartCoroutine(_collideObj.transform.root.GetComponent<CrushingBlock>().Freeze(timestop_duration));
                 }
