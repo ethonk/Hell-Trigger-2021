@@ -379,10 +379,12 @@ MonoBehaviour:
   bulletSpeed: 20
   bulletLife: 0.8
   fireDelay: 1
+  timestop_duration: 3
   gunChamber: 
   firePoint: {fileID: 7716376154074141044}
   bulletPrefab: {fileID: 9086730013738621469, guid: 097cd20213a264644ac090f8601f7d7a,
     type: 3}
+  UI: {fileID: 0}
   snd_gun_fire: {fileID: 8300000, guid: eb9021142b49b8f439bb63fcea70cf62, type: 3}
   snd_gun_fire_grapple: {fileID: 8300000, guid: 372df8ea25504634d9c4fed2e95cc0b0,
     type: 3}
@@ -393,6 +395,7 @@ MonoBehaviour:
   snd_gun_reload: {fileID: 8300000, guid: 6c23e6cff55ce4d45924f899891a1b22, type: 3}
   snd_gun_reload_complete: {fileID: 8300000, guid: 97489bb43a5fd5d4989e576b0d2af715,
     type: 3}
+  snd_gun_cycle: {fileID: 8300000, guid: 0cf06fc820eb82f4bb5aad51967f53ee, type: 3}
   canFire: 1
 --- !u!114 &2925819933093361200
 MonoBehaviour:
@@ -452,6 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01e655a9e9f5594190d86496a1a169e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UI: {fileID: 0}
 --- !u!232 &3711999995487859821
 DistanceJoint2D:
   m_ObjectHideFlags: 0
