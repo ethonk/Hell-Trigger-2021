@@ -65,7 +65,7 @@ namespace CharacterController
 
         public void OnCrouching (bool isCrouching)
         {
-            playerAnimator.SetBool("IsCrouching", isCrouching);
+            playerAnimator.SetBool("IsCrouching", crouch);
         }
 
         void FixedUpdate()  // called a fixed amount of times per update 

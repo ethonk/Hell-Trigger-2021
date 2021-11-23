@@ -395,7 +395,7 @@ MonoBehaviour:
   snd_gun_reload: {fileID: 8300000, guid: 6c23e6cff55ce4d45924f899891a1b22, type: 3}
   snd_gun_reload_complete: {fileID: 8300000, guid: 97489bb43a5fd5d4989e576b0d2af715,
     type: 3}
-  snd_gun_cycle: {fileID: 8300000, guid: 0cf06fc820eb82f4bb5aad51967f53ee, type: 3}
+  snd_gun_cycle: {fileID: 0}
   canFire: 1
 --- !u!114 &2925819933093361200
 MonoBehaviour:
@@ -702,7 +702,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5003752}
+  m_Offset: {x: -0.007570654, y: 0.5003752}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -713,7 +713,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.92265, y: 1.0076319}
+  m_Size: {x: 0.81250083, y: 1.0076319}
   m_EdgeRadius: 0
 --- !u!58 &2925819933093361207
 CircleCollider2D:
@@ -728,9 +728,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.4873916}
+  m_Offset: {x: 0, y: -0.46600008}
   serializedVersion: 2
-  m_Radius: 0.46109825
+  m_Radius: 0.48248976
 --- !u!1 &6186161193543228231
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +903,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.914}
+  m_Offset: {x: 0, y: -0.91}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
