@@ -137,7 +137,7 @@ public class GunHandler : MonoBehaviour
                     StartCoroutine(_collideObj.transform.root.GetComponent<CrushingBlock>().Freeze(timestop_duration));
                 }
                 // If a moving block is hit.
-                if (_collideObj.transform.root.name == "MovingBlock" && !_collideObj.transform.root.GetComponent<MovingBlock>().frozen)
+                if (_collideObj.transform.root.tag == "Platform" && !_collideObj.transform.root.GetComponent<MovingBlock>().frozen)
                 {
                     StartCoroutine(_collideObj.transform.root.GetComponent<MovingBlock>().Freeze(timestop_duration));
                 }
