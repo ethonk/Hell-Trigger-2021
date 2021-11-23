@@ -395,7 +395,7 @@ MonoBehaviour:
   snd_gun_reload: {fileID: 8300000, guid: 6c23e6cff55ce4d45924f899891a1b22, type: 3}
   snd_gun_reload_complete: {fileID: 8300000, guid: 97489bb43a5fd5d4989e576b0d2af715,
     type: 3}
-  snd_gun_cycle: {fileID: 0}
+  snd_gun_cycle: {fileID: 8300000, guid: 0cf06fc820eb82f4bb5aad51967f53ee, type: 3}
   canFire: 1
 --- !u!114 &2925819933093361200
 MonoBehaviour:
