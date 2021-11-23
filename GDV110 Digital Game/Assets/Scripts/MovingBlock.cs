@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class MovingBlock : MonoBehaviour
 {
+    [Header("Player")]
     public GameObject player;
+
+    [Header("Properties")]
+    public bool is_CrushingBlock;
+
+    [Header("Interpolation")]
     [SerializeField] [Range(0f,4f)] float lerpTime;
     [SerializeField] Vector2[] positions;
-
     int posIndex = 0;
     int length;
     float t = 0f;
 
+    [Header("Time Stop")]
     public bool frozen = false;
+
     [Header("Sound")]
     public AudioClip snd_timestop_resume;
+
 
     void Start()
     {
@@ -50,13 +58,18 @@ public class MovingBlock : MonoBehaviour
     // Keep player attached.
     public void OnCollisionEnter2D(Collision2D col)
     {
-        print("hi " + col.gameObject.name);
-        col.transform.SetParent(transform);
+        if (col.transform.gameObject.layer == 8)    // if a player
+        {
+            if (is_CrushingBlock)   // kill instead
+            {
+                col.gameObject.GetComponent<Player>().KillPlayer();
+            }
+        }
+        col.transform.SetParent(transform); // stick player on
     }
 
     public void OnCollisionExit2D(Collision2D col)
     {
-        print("bye " + col.gameObject.name);
         col.transform.SetParent(null);
     }
 }
