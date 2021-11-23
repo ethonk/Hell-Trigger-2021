@@ -9,11 +9,13 @@ public class GunHandler : MonoBehaviour
 
     [Header("Gun Settings")]
     public int chamberSize;                     // How many bullets does this gun hold at a time?
-    
     public float reloadSpeed;                   // How fast does this gun reload (seconds)?
     public float bulletSpeed;                   // How fast will the bullet travel?
     public float bulletLife;                    // How far long the bullet travel?
     public float fireDelay;                     // How often can the gun fire (seconds)?
+
+    [Header("Timestop Related")]
+    public float timestop_duration = 3.0f;      // How long does timestop last?
 
     [Header("Gun Properties")]
     public List<BulletType> gunChamber;
@@ -128,6 +130,16 @@ public class GunHandler : MonoBehaviour
                 if (_collideObj.tag == "Loose Object")
                 {
                     _collideObj.GetComponent<Object>().ApplyTimestop();
+                }
+                // If a crushing block is hit.
+                if (_collideObj.transform.root.name == "CrushingBlock" && !_collideObj.transform.root.GetComponent<CrushingBlock>().frozen)
+                {
+                    StartCoroutine(_collideObj.transform.root.GetComponent<CrushingBlock>().Freeze(timestop_duration));
+                }
+                // If a moving block is hit.
+                if (_collideObj.transform.root.name == "MovingBlock" && !_collideObj.transform.root.GetComponent<MovingBlock>().frozen)
+                {
+                    StartCoroutine(_collideObj.transform.root.GetComponent<MovingBlock>().Freeze(timestop_duration));
                 }
                 break;
         }
