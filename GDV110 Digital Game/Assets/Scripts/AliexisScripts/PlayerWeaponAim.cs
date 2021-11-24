@@ -25,11 +25,23 @@ public class PlayerWeaponAim : MonoBehaviour
             float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
             aimTransform.eulerAngles = new Vector3(0, 0, angle);
             //Debug.Log(angle);
+            
+            Vector3 weplocalScale = aimTransform.localScale;
+            if (angle > 90 || angle < -90) 
+            {
+                weplocalScale.y = -2.5268f;
+            }
+            else
+            {
+                weplocalScale.y = +2.5268f;
+            }
+            aimTransform.localScale = weplocalScale;
         }
     }
 
     #region custom functions
     // getting the mouse position in the World using Z = 0f
+
     public static Vector3 GetMouseWorldPos()
     {
         Vector3 vec = GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
