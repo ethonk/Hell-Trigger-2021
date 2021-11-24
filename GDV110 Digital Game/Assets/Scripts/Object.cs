@@ -21,14 +21,13 @@ public class Object : MonoBehaviour
 
         IEnumerator TimeStopCoroutine()
         {   
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
-            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+            GetComponent<Rigidbody2D>().gravityScale = 0;
 
             yield return new WaitForSeconds(timestop_duration);
             
             GetComponent<AudioSource>().PlayOneShot(snd_timestop_resume);
             GetComponent<Rigidbody2D>().AddForce(-transform.up);
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            GetComponent<Rigidbody2D>().gravityScale = 1;
         }
     } 
 }
