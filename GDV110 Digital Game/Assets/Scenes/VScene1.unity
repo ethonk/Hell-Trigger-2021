@@ -534,37 +534,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 220782500684555999, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 220782500684555999, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 220782500684555999, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 5546671543968653177, guid: 462091a1aab33e44c94adf4c30c03a5e,
-        type: 3}
-    - target: {fileID: 220782500684555999, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2471191755229578113, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: orthographic size
-      value: 8.244784
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925819933093361201, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
-        type: 3}
-      propertyPath: minGrappleDistance
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2925819933093361202, guid: 2c09771f4e5fb8f46b0002b42cbc0355,
         type: 3}
       propertyPath: m_Name

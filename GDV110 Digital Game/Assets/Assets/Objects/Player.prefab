@@ -105,7 +105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459249681200966841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14, y: 0, z: 0}
+  m_LocalPosition: {x: 0.14, y: 0.222, z: 0}
   m_LocalScale: {x: 2.5268, y: 2.5268, z: 2.5268}
   m_Children:
   - {fileID: 459249680212230659}
@@ -457,6 +457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lineRenderer: {fileID: 5567547982726857605}
   _distanceJoint: {fileID: 3711999995487859821}
+  minGrappleDistance: 0.5
   maxGrappleDistance: 10
   objGrappling: {fileID: 0}
   objGrapplingVector: {x: 0, y: 0, z: 0}
@@ -808,7 +809,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8.244784
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
