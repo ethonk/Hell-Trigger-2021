@@ -27,6 +27,14 @@ public class GunHandler : MonoBehaviour
     [Header("References")]
     public GameObject UI;
 
+    [Header("Sprites")]
+    public SpriteRenderer gun_sprite;
+    public Sprite spr_gun_norm;
+    public Sprite spr_gun_ts;
+    public Sprite spr_gun_gp;
+    public Sprite spr_gp;
+    public Sprite spr_ts;
+    
     [Header("Audio")]
     public AudioClip snd_gun_fire;              // Sound played on generic fire.
     public AudioClip snd_gun_fire_grapple;      // Sound played on grapple fire.
@@ -85,6 +93,18 @@ public class GunHandler : MonoBehaviour
             {
                 #region Physical bullet firing
                     GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                    if (gunChamber.Count > 0)
+                    {
+                        switch(gunChamber[0])
+                        {
+                            case GunHandler.BulletType.Grapple:
+                                newBullet.GetComponent<SpriteRenderer>().sprite = spr_gp;
+                                break;
+                            case GunHandler.BulletType.Freeze:
+                                newBullet.GetComponent<SpriteRenderer>().sprite = spr_ts;
+                                break;
+                        }
+                    }
                     newBullet.GetComponent<Bullet>().bulletType = gunChamber[0];
                 #endregion
 
@@ -159,6 +179,26 @@ public class GunHandler : MonoBehaviour
         }
     }
 
+    void ChangeGunSprite()
+    {
+        if (gunChamber.Count > 0)
+        {
+            switch (gunChamber[0])
+            {
+                case BulletType.Grapple:
+                    gun_sprite.sprite = spr_gun_gp;
+                    break;
+                case BulletType.Freeze:
+                    gun_sprite.sprite = spr_gun_ts;
+                    break;
+            }
+        }
+        else
+        {
+            gun_sprite.sprite = spr_gun_norm;
+        }
+    }
+
     // == CORE START AND UPDATE ==
     void Start()
     {
@@ -189,5 +229,7 @@ public class GunHandler : MonoBehaviour
                 CycleBullet();
             }
         }
+
+        ChangeGunSprite();
     }
 }

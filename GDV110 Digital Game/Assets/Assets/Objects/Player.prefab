@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459249680212230656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.348, y: -0.018, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.348, y: 0.126, z: 0}
+  m_LocalScale: {x: 0.48857608, y: 0.48857608, z: 0.48857608}
   m_Children: []
   m_Father: {fileID: 459249681200966840}
   m_RootOrder: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 1834615023
   m_SortingLayer: 3
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: b1e82a594c28ab24190ab7e348eb1632, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd9dd0c2d2b72b2469c5570bed842ae6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -385,6 +385,12 @@ MonoBehaviour:
   bulletPrefab: {fileID: 9086730013738621469, guid: 097cd20213a264644ac090f8601f7d7a,
     type: 3}
   UI: {fileID: 0}
+  gun_sprite: {fileID: 459249680212230658}
+  spr_gun_norm: {fileID: 21300000, guid: fd9dd0c2d2b72b2469c5570bed842ae6, type: 3}
+  spr_gun_ts: {fileID: 21300000, guid: 22e6b6267461eda4f86fd881b462d23b, type: 3}
+  spr_gun_gp: {fileID: 21300000, guid: 6329ca7d0b131234787779ff7c54ba24, type: 3}
+  spr_gp: {fileID: 21300000, guid: 51006bb5f6cbbb34cad4ca480eaef5db, type: 3}
+  spr_ts: {fileID: 21300000, guid: ef63ef501fd9f2f4abf2d55ddf1d79cb, type: 3}
   snd_gun_fire: {fileID: 8300000, guid: eb9021142b49b8f439bb63fcea70cf62, type: 3}
   snd_gun_fire_grapple: {fileID: 8300000, guid: 372df8ea25504634d9c4fed2e95cc0b0,
     type: 3}
@@ -853,7 +859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6544998374320671205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.507, y: 0.021, z: 0}
+  m_LocalPosition: {x: 0.542, y: 0.173, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 459249681200966840}
