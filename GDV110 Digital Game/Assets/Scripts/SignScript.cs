@@ -10,13 +10,14 @@ public class SignScript : MonoBehaviour
 
     [Header("Sign Properties")]
     public string sign_text;
-
+    
     void Start()
     {
+        // Set sign text
         sign.GetComponent<TextMeshPro>().text = sign_text;
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.transform.root.gameObject.layer == 8)
         {
@@ -24,7 +25,7 @@ public class SignScript : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D col)
+    void OnTriggerExit2D(Collider2D col)
     {
         if (col.transform.root.gameObject.layer == 8)
         {
