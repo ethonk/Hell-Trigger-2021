@@ -9,6 +9,7 @@ public class GrappleScript : MonoBehaviour
     public DistanceJoint2D _distanceJoint;
 
     [Header("Grapple Values")]
+    public float minGrappleDistance = 0.5f;
     public float maxGrappleDistance = 10.0f;
 
     private Vector3 m_TempPos;
@@ -55,7 +56,7 @@ public class GrappleScript : MonoBehaviour
             if (Input.GetMouseButton(1))
             {
                 _distanceJoint.distance -= 0.05f;
-                if (_distanceJoint.distance < 2.0f)
+                if (_distanceJoint.distance < minGrappleDistance)
                 {
                     StopGrapple();  // Stop grappling if distance is too small.
                 }
