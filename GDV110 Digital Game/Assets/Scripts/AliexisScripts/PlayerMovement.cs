@@ -37,6 +37,8 @@ namespace CharacterController
 
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+            playerAnimator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
@@ -58,14 +60,14 @@ namespace CharacterController
             if (horizontalMove != 0f && isGrounded) playerAnimator.SetBool("Moving", true);
             else playerAnimator.SetBool("Moving", false);
 
-            if (crouch == true) playerAnimator.SetBool("Crouching", true);
-            else playerAnimator.SetBool("Crouching", false);
+           /* if (crouch == true) playerAnimator.SetBool("Crouching", true);
+            else playerAnimator.SetBool("Crouching", false);*/
             
         }
 
         public void OnCrouching (bool isCrouching)
         {
-            playerAnimator.SetBool("IsCrouching", crouch);
+            playerAnimator.SetBool("Crouching", isCrouching);
         }
 
         void FixedUpdate()  // called a fixed amount of times per update 
