@@ -107,5 +107,9 @@ public class UIHandler : MonoBehaviour
         {
             isPaused = !isPaused;
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            player.GetComponent<Player>().Restart();
+        }
     }
 }
