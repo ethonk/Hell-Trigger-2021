@@ -224,7 +224,7 @@ public class GunHandler : MonoBehaviour
                 StartCoroutine(FireGun());
             }
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 CycleBullet();
             }
