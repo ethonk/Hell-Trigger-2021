@@ -7,7 +7,7 @@ public class MenuScript : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("LevelOne", LoadSceneMode.Single);
+        SceneManager.LoadScene("VScene1", LoadSceneMode.Single);
     }
 
     public void Quit()

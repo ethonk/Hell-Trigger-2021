@@ -48,9 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gun: {fileID: 1083544996, guid: 2c09771f4e5fb8f46b0002b42cbc0355, type: 3}
   bulletType: 0
-  bullet_sprite: {fileID: 972640013610005744}
-  spr_ts: {fileID: 21300000, guid: ef63ef501fd9f2f4abf2d55ddf1d79cb, type: 3}
-  spr_gp: {fileID: 21300000, guid: 51006bb5f6cbbb34cad4ca480eaef5db, type: 3}
 --- !u!212 &972640013610005744
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -135,6 +132,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.1, y: 0}
   serializedVersion: 2
-  m_Radius: 0.09
+  m_Radius: 0.2

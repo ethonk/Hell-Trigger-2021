@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            transform.position = sign.position;
+            transform.position = new Vector2(sign.position.x, sign.position.y + 1);
 
             GameObject[] fallingBlocks = GameObject.FindGameObjectsWithTag("Loose Object");
 

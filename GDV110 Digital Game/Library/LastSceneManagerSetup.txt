@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/VScene1.unity
+- path: Assets/Scenes/VScene3.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

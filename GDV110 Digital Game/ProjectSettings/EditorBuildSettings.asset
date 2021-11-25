@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/MainMenu.unity
     guid: 9112e4864c95bfa4d89f7201f46a9a98
   - enabled: 1
-    path: Assets/Scenes/EthanScene.unity
-    guid: 8ec8f5a222f231441b391171b4bef342
+    path: Assets/Scenes/Game/VScene1.unity
+    guid: dc8cf815f3e81834086fab8f4b8cd697
+  - enabled: 1
+    path: Assets/Scenes/Game/VScene2.unity
+    guid: c0558931fead3fc4ea2f271a486ee54b
+  - enabled: 1
+    path: Assets/Scenes/Game/VScene3.unity
+    guid: c69cfabe684a1b1459723c272e391b38
   m_configObjects: {}
