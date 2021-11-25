@@ -68961,6 +68961,12 @@ PrefabInstance:
       propertyPath: sign_text
       value: You can reload while on a grapple!
       objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150317, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5744871ca98b95044a46a4c17bdaad9c,
+        type: 3}
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: m_RootOrder
@@ -102511,6 +102517,12 @@ PrefabInstance:
       value: The grapple is very stiff and wil always have the same length unless
         using RMB.
       objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150317, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5744871ca98b95044a46a4c17bdaad9c,
+        type: 3}
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: m_RootOrder
@@ -102585,6 +102597,12 @@ PrefabInstance:
       propertyPath: sign_text
       value: By managing your bullets, you can use the same bullet twice.
       objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150317, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5744871ca98b95044a46a4c17bdaad9c,
+        type: 3}
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: m_RootOrder
@@ -103077,6 +103095,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950732039}
   m_CullTransparentMesh: 0
+--- !u!1001 &2012450906
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7392827424345150315, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_Name
+      value: Sign (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150316, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: sign_text
+      value: Slopes are really quite annoying!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150317, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5744871ca98b95044a46a4c17bdaad9c,
+        type: 3}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 142
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c68f831a5d0525e4899e7202c3e7d14b, type: 3}
 --- !u!1001 &2101292054
 PrefabInstance:
   m_ObjectHideFlags: 0
