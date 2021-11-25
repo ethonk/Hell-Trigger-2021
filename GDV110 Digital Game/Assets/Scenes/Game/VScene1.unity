@@ -2090,7 +2090,7 @@ PrefabInstance:
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
@@ -57616,7 +57616,7 @@ PrefabInstance:
     - target: {fileID: 7392827424345150316, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: sign_text
-      value: You can switch between using the [F] key
+      value: You can switch between bullets using the [F] key
       objectReference: {fileID: 0}
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
@@ -57626,12 +57626,12 @@ PrefabInstance:
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.5
+      value: 112.5
       objectReference: {fileID: 0}
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.51
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
@@ -57771,7 +57771,8 @@ PrefabInstance:
     - target: {fileID: 7392827424345150316, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: sign_text
-      value: There are 2 types of bullets; timestop (blue) and grapple (yellow)
+      value: There are 2 types of bullets (Top left); timestop (blue) and grapple
+        (yellow)
       objectReference: {fileID: 0}
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
@@ -57781,7 +57782,7 @@ PrefabInstance:
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.5
+      value: 54.5
       objectReference: {fileID: 0}
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
@@ -57911,6 +57912,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7392827424150633954, guid: c68f831a5d0525e4899e7202c3e7d14b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7392827424345150315, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: m_Name
@@ -57929,7 +57935,7 @@ PrefabInstance:
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 85.5
+      value: 81.5
       objectReference: {fileID: 0}
     - target: {fileID: 7392827424345150319, guid: c68f831a5d0525e4899e7202c3e7d14b,
         type: 3}
@@ -59015,7 +59021,7 @@ PrefabInstance:
     - target: {fileID: 4527343103143028454, guid: 6af4c011754223047aee2050a8c3a356,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4527343103143028454, guid: 6af4c011754223047aee2050a8c3a356,
         type: 3}
