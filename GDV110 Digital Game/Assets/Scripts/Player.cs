@@ -11,13 +11,30 @@ public class Player : MonoBehaviour
 
     [Header("States")]
     public bool isGrappling = false;
+    public Transform sign;
 
     public void KillPlayer()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (sign == null)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else
+        {
+            transform.position = sign.position;
+        }
     }
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        // When touching the sign, assign checkpoint.
+        if (col.transform.tag == "Sign")
+        {
+            sign = col.transform;
+        }
     }
 }
