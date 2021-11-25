@@ -22,6 +22,13 @@ public class Player : MonoBehaviour
         else
         {
             transform.position = sign.position;
+
+            GameObject[] fallingBlocks = GameObject.FindGameObjectsWithTag("Loose Object");
+
+            foreach (GameObject fallingBlock in fallingBlocks)
+            {
+                fallingBlock.transform.position = fallingBlock.GetComponent<Object>().startPosition;
+            }
         }
     }
     public void Restart()

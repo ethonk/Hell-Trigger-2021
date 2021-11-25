@@ -15,6 +15,14 @@ public class Object : MonoBehaviour
     [Header("Sound")]
     public AudioClip snd_timestop_resume;
 
+    [Header("Starting Pos")]
+    public Vector2 startPosition;
+    
+    void Start()
+    {
+        startPosition = transform.position;
+    }
+
     public void ApplyTimestop()
     {
         StartCoroutine(TimeStopCoroutine());
