@@ -1,5 +1,5 @@
 # Hell Trigger 
-Ethan Uy          *(Lead Developer)*
+Ethan Uy          *(Lead Developer)*  
 Aliexis Alvarez   *(Programmer)*  
 Logan Leilua      *(Level Designer)*  
 Liam Vallesfin    *(Character Designer)*  
